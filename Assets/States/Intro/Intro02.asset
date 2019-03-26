@@ -19,7 +19,7 @@ MonoBehaviour:
     gera\xE7\xE3o para gera\xE7\xE3o, de que na casa mais afastada e velha do bairro,
     vivia uma bruxa. Diziam que coisas estranhas aconteciam pr\xF3ximo daquele local,
     sombras suspeitas, barulhos assustadores, entre muitos outros mist\xE9rios. \n"
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: c70dfa257882516438367125e8b03c77, type: 3}
   switchInfo:
-  - buttonTxt: Continuar
+  - buttonTxt: '...'
     targetState: {fileID: 11400000, guid: e36c16658e4170548bbabb8ee6648353, type: 2}

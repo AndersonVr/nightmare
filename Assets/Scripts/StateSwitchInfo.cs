@@ -6,5 +6,5 @@ using UnityEngine;
 public class StateSwitchInfo
 {
     public string buttonTxt;
-    public State targetState;
+    public MotherState targetMotherState;
 }

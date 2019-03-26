@@ -21,5 +21,5 @@ MonoBehaviour:
     mas claro que n\xE3o poderia ser diferente n\xE3o \xE9 mesmo?  "
   image: {fileID: 21300000, guid: c70dfa257882516438367125e8b03c77, type: 3}
   switchInfo:
-  - buttonTxt: Continuar
+  - buttonTxt: '...'
     targetState: {fileID: 11400000, guid: 9256f6683231cf1488991bd2758042de, type: 2}

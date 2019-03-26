@@ -5,7 +5,7 @@ using UnityEngine;
 public class MusicPlayer : MonoBehaviour
 {
 
-    static MusicPlayer instance = null;
+    public static MusicPlayer instance = null;
 
     public AudioClip[] audioClips;
 
@@ -27,14 +27,14 @@ public class MusicPlayer : MonoBehaviour
             music.Play();
         }
     }
-    private void OnLevelWasLoaded(int level)
-    {
-        Debug.Log("MusicPlayer: loaded level " + level);
-        music.Stop();
+        private void OnLevelWasLoaded(int level)
+     {
+         Debug.Log("MusicPlayer: loaded level " + level);
+         music.Stop();
 
-        music.clip = audioClips[level];
-        music.loop = true;
-        music.Play();
-    }
+         music.clip = audioClips[level];
+         music.loop = true;
+         music.Play();
+     }
 }
 

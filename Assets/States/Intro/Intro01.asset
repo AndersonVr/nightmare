@@ -15,7 +15,7 @@ MonoBehaviour:
   storyText: "\tE se o mundo for mais do que voc\xEA pode ver, sentir, ouvir? E se
     as lendas, n\xE3o for\xE9m apenas boatos e hist\xF3rias? Qual caminho voc\xEA
     escolheria para viver? \n"
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: c70dfa257882516438367125e8b03c77, type: 3}
   switchInfo:
-  - buttonTxt: Continuar
+  - buttonTxt: '...'
     targetState: {fileID: 11400000, guid: c303ac54365c5884c83585f1ae33398b, type: 2}
