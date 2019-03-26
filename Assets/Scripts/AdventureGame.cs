@@ -15,12 +15,13 @@ public class AdventureGame : MonoBehaviour
 
     void Start()
     {
-        this.motherState = startingState;
-        LoadState(startingState);
+        motherState = startingState;
+        LoadMotherState(motherState);
     }
 
-    public void LoadState(MotherState motherState)
+    public void LoadMotherState(MotherState motherState)
     {
-        motherState.LoadStates(textComponent, imageComponent, buttonComponents);
+        motherState.LoadState(textComponent, imageComponent, buttonComponents, this);
     }
+
 }

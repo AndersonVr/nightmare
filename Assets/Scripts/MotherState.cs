@@ -9,29 +9,11 @@ public class MotherState : ScriptableObject
 {
     [SerializeField] public State[] states;
 
-    private void Awake()
-    {
-        Debug.Log("Algo ai Awake" + this.GetInstanceID().ToString());
-    }
-
-    void Start()
-    {
-        Debug.Log("Algo ai Start" + this.GetInstanceID().ToString());
-    }
-
-    void Update()
-    {
-        Debug.Log(this.GetInstanceID().ToString());
-
-    }
-
     public State GetFirstState()
     {
         var size = states.Length;
         if (size == 0)
         {
-            Debug.Log("Algo ai GetFirst");
-
             return new State();
         }
         else
@@ -39,12 +21,14 @@ public class MotherState : ScriptableObject
             return states[size - 1];
         }
     }
-    public virtual void LoadStates(Text textComponent, Image imageComponent, Button[] buttonComponents)
+
+    public virtual void LoadState(Text textComponent, Image imageComponent, Button[] buttonComponents, AdventureGame adventureGame)
     {
-        Debug.Log("Algo ai LoadStates" + this.GetInstanceID().ToString());
-        Load(this.GetFirstState(), textComponent, imageComponent, buttonComponents);    
+        // Debug.Log("LoadState " + this.GetInstanceID().ToString());
+        Setup(this.GetFirstState(), textComponent, imageComponent, buttonComponents, adventureGame);    
     }
-    public void Load(State state, Text textComponent, Image imageComponent, Button[] buttonComponents)
+
+    public void Setup(State state, Text textComponent, Image imageComponent, Button[] buttonComponents, AdventureGame adventureGame)
     {
         textComponent.text = state.GetStateStory();
         imageComponent.sprite = state.ImageStateStory();
@@ -53,9 +37,11 @@ public class MotherState : ScriptableObject
         {
             if (state.GetSwitchInfo() != null && i < state.GetSwitchInfo().Length)
             {
+                var buttonTxt = state.GetSwitchInfo()[i].buttonTxt;
+                var motherState = state.GetSwitchInfo()[i].targetMotherState;
                 buttonComponents[i].gameObject.SetActive(true);
-                buttonComponents[i].GetComponentInChildren<Text>().text = state.GetSwitchInfo()[i].buttonTxt;
-               // buttonComponents[i].GetComponentInChildren<MotherState>() = state.GetSwitchInfo()[i].targetMotherState;
+                buttonComponents[i].GetComponentInChildren<Text>().text = buttonTxt;
+                buttonComponents[i].GetComponentInChildren<Button>().onClick.AddListener ( delegate { adventureGame.LoadMotherState(motherState); });
             }
             else
             {

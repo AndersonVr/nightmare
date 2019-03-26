@@ -7,18 +7,17 @@ using System.Linq;
 [CreateAssetMenu(menuName = "BanheiroMotherState")]
 public class BanheiroMotherState : MotherState
 {
-    public override void LoadStates(Text textComponent, Image imageComponent, Button[] buttonComponents)
+    public override void LoadState(Text textComponent, Image imageComponent, Button[] buttonComponents, AdventureGame adventureGame)
     {
-        //BanheiroState banheiros = (BanheiroState)this.states;
         //var banheiros = this.states.Cast<BanheiroState>().ToArray();
 
-       if (Globals.banheiroChave)
+        if (Globals.banheiroChave)
         {
-            Load(this.states[1], textComponent, imageComponent, buttonComponents);
+            Setup(this.states[1], textComponent, imageComponent, buttonComponents, adventureGame);
         }
         else
         {
-            Load(this.states[0], textComponent, imageComponent, buttonComponents);
+            Setup(this.states[0], textComponent, imageComponent, buttonComponents, adventureGame);
         }
     }
 }
