@@ -11,12 +11,9 @@ public class AdventureGame : MonoBehaviour
     [SerializeField] MotherState startingState;
     [SerializeField] Button[] buttonComponents;
 
-    MotherState motherState;
-
     void Start()
     {
-        motherState = startingState;
-        LoadMotherState(motherState);
+        LoadMotherState(startingState);
     }
 
     public void LoadMotherState(MotherState motherState)
