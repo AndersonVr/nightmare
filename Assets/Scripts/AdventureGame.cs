@@ -18,7 +18,6 @@ public class AdventureGame : MonoBehaviour
 
     public void LoadMotherState(MotherState motherState)
     {
-        Debug.Log("Opa"+ motherState.GetInstanceID().ToString());
         motherState.LoadState(this);        
     }
 

@@ -16,7 +16,7 @@ public class IntroMother : MotherState
         if (Globals.intro == 1)
         {
             Setup(this.states[0], adventureGame);
-                Globals.intro++;
+            Globals.intro++;
         }
         else if (Globals.intro == 2)
         {

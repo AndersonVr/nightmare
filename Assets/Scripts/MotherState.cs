@@ -24,7 +24,6 @@ public class MotherState : ScriptableObject
 
     public virtual void LoadState(AdventureGame adventureGame)
     {
-        // Debug.Log("LoadState " + this.GetInstanceID().ToString());
         Setup(this.GetFirstState(), adventureGame);    
     }
 
@@ -41,6 +40,7 @@ public class MotherState : ScriptableObject
                 var motherState = state.GetSwitchInfo()[i].targetMotherState;
                 adventureGame.buttonComponents[i].gameObject.SetActive(true);
                 adventureGame.buttonComponents[i].GetComponentInChildren<Text>().text = buttonTxt;
+                adventureGame.buttonComponents[i].GetComponentInChildren<Button>().onClick.RemoveAllListeners();
                 adventureGame.buttonComponents[i].GetComponentInChildren<Button>().onClick.AddListener ( delegate
                 {
                     adventureGame.LoadMotherState(motherState);
