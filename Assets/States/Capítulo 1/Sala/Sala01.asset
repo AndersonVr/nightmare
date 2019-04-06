@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b2087ca2c070ef40a334e890562519a, type: 3}
+  m_Name: Sala01
+  m_EditorClassIdentifier: 
+  storyText: "\"Voc\xEA chega ao que parece ser uma sala de estar, todos os m\xF3veis
+    aqui s\xE3o velhos e antigos. H\xE1 uma TV velha de tubo ligada, com apenas com
+    est\xE1tica em sua tela.\nEm frente a TV h\xE1 uma cadeira de rodas, com um senhor
+    sentado nela, ele parece n\xE3o te notar. Logo mais a frente, em um canto escuro
+    da sala, temos um sof\xE1\nvermelho completamente rasgado e uma porta logo ao
+    lado dele. \""
+  image: {fileID: 0}
+  switchInfo:
+  - buttonTxt: "Tentar se apr\xF3ximar e falar com o velho. "
+    targetMotherState: {fileID: 0}
+  - buttonTxt: "Ir para a porta pr\xF3xima ao sof\xE1. "
+    targetMotherState: {fileID: 0}
+  - buttonTxt: 'Voltar para o Hall da casa. '
+    targetMotherState: {fileID: 11400000, guid: cd6c78dde4922fb4e91b60b71ba1637d,
+      type: 2}

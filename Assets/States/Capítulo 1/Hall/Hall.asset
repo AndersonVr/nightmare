@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b2087ca2c070ef40a334e890562519a, type: 3}
+  m_Name: Hall
+  m_EditorClassIdentifier: 
+  storyText: "\"Surpreendentemente a porta estava um pouco aberta, quase como um convite
+    para dar uma espiadinha l\xE1 dentro. Voc\xEA entra e encontra uma casa velha,
+    mofada, \ncom muito p\xF3, algumas teias de aranha, totalmente de madeira, algumas
+    t\xE1buas at\xE9 mesmo rangiam ao caminhar sobre elas e iluminada apenas com a
+    luz das janelas, \nque por sinal tinha muitas. Por\xE9m por ser uma noite de lua
+    cheia n\xE3o era muito dif\xEDcil de se enxergar, at\xE9 mesmo l\xE1 dentro.\nUma
+    escada logo a sua frente, a baixo dela uma porta e a esquerda uma porta. \""
+  image: {fileID: 0}
+  switchInfo:
+  - buttonTxt: 'Uma escada em forma de L que parecia levar ao segundo andar da casa. '
+    targetMotherState: {fileID: 0}
+  - buttonTxt: "Uma porta logo abaixo da escada, dela emana um cheiro de podrid\xE3o
+      que chega at\xE9 mesmo embrulhar o est\xF4mago "
+    targetMotherState: {fileID: 0}
+  - buttonTxt: "Uma porta a esquerda, \xE9 poss\xEDvel ouvir um chiado que parece
+      ser de uma TV ou um r\xE1dio."
+    targetMotherState: {fileID: 11400000, guid: ad4bea915c778124bb50bb9b3d7a7b26,
+      type: 2}
+  - buttonTxt: Voltar para a frente da casa.
+    targetMotherState: {fileID: 11400000, guid: badf26eb9ada5a34ba280252af0c2c9b,
+      type: 2}

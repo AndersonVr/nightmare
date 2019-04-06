@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b2087ca2c070ef40a334e890562519a, type: 3}
+  m_Name: Intro02
+  m_EditorClassIdentifier: 
+  storyText: "\tEm uma vizinhan\xE7a como qualquer outra. Entre as crian\xE7as existia
+    uma lenda que era passada de gera\xE7\xE3o para gera\xE7\xE3o, de que na casa
+    mais afastada e velha do bairro, vivia uma bruxa.  \r\n\tEm uma vizinhan\xE7a
+    como qualquer outra. Entre as crian\xE7as existia uma lenda que era passada de
+    gera\xE7\xE3o para gera\xE7\xE3o, de que na casa mais afastada e velha do bairro,
+    vivia uma bruxa. Diziam que coisas estranhas aconteciam pr\xF3ximo daquele local,
+    sombras suspeitas, barulhos assustadores, entre muitos outros mist\xE9rios. \n"
+  image: {fileID: 21300000, guid: c70dfa257882516438367125e8b03c77, type: 3}
+  switchInfo:
+  - buttonTxt: '...'
+    targetMotherState: {fileID: 11400000, guid: 6dfd1e454db567a459d65cd66215b90f,
+      type: 2}

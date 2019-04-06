@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
 
-[CreateAssetMenu(menuName = "BanheiroMotherState")]
+/*[CreateAssetMenu(menuName = "BanheiroMotherState")]
 public class BanheiroMotherState : MotherState
 {
     public override void LoadState(Text textComponent, Image imageComponent, Button[] buttonComponents, AdventureGame adventureGame)
@@ -20,4 +20,4 @@ public class BanheiroMotherState : MotherState
             Setup(this.states[0], textComponent, imageComponent, buttonComponents, adventureGame);
         }
     }
-}
+}*/

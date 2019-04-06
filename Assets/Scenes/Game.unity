@@ -918,7 +918,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textComponent: {fileID: 1982481752}
   imageComponent: {fileID: 510319071}
-  startingState: {fileID: 11400000, guid: 42a207d93062da84ebd2bfdc3ff7b6df, type: 2}
+  startingState: {fileID: 11400000, guid: 6dfd1e454db567a459d65cd66215b90f, type: 2}
   buttonComponents:
   - {fileID: 263215365}
   - {fileID: 1967842268}

@@ -6,10 +6,10 @@ using UnityEngine.UI;
 
 public class AdventureGame : MonoBehaviour
 {
-    [SerializeField] Text textComponent;
-    [SerializeField] Image imageComponent;
-    [SerializeField] MotherState startingState;
-    [SerializeField] Button[] buttonComponents;
+    [SerializeField] public Text textComponent;
+    [SerializeField] public Image imageComponent;
+    [SerializeField] public MotherState startingState;
+    [SerializeField] public Button[] buttonComponents;
 
     void Start()
     {
@@ -18,7 +18,8 @@ public class AdventureGame : MonoBehaviour
 
     public void LoadMotherState(MotherState motherState)
     {
-        motherState.LoadState(textComponent, imageComponent, buttonComponents, this);
+        Debug.Log("Opa"+ motherState.GetInstanceID().ToString());
+        motherState.LoadState(this);        
     }
 
 }

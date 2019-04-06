@@ -22,30 +22,33 @@ public class MotherState : ScriptableObject
         }
     }
 
-    public virtual void LoadState(Text textComponent, Image imageComponent, Button[] buttonComponents, AdventureGame adventureGame)
+    public virtual void LoadState(AdventureGame adventureGame)
     {
         // Debug.Log("LoadState " + this.GetInstanceID().ToString());
-        Setup(this.GetFirstState(), textComponent, imageComponent, buttonComponents, adventureGame);    
+        Setup(this.GetFirstState(), adventureGame);    
     }
 
-    public void Setup(State state, Text textComponent, Image imageComponent, Button[] buttonComponents, AdventureGame adventureGame)
+    public void Setup(State state, AdventureGame adventureGame)
     {
-        textComponent.text = state.GetStateStory();
-        imageComponent.sprite = state.ImageStateStory();
+        adventureGame.textComponent.text = state.GetStateStory();
+        adventureGame.imageComponent.sprite = state.ImageStateStory();
 
-        for (int i = 0; i < buttonComponents.Length; i++)
+        for (int i = 0; i < adventureGame.buttonComponents.Length; i++)
         {
             if (state.GetSwitchInfo() != null && i < state.GetSwitchInfo().Length)
             {
                 var buttonTxt = state.GetSwitchInfo()[i].buttonTxt;
                 var motherState = state.GetSwitchInfo()[i].targetMotherState;
-                buttonComponents[i].gameObject.SetActive(true);
-                buttonComponents[i].GetComponentInChildren<Text>().text = buttonTxt;
-                buttonComponents[i].GetComponentInChildren<Button>().onClick.AddListener ( delegate { adventureGame.LoadMotherState(motherState); });
+                adventureGame.buttonComponents[i].gameObject.SetActive(true);
+                adventureGame.buttonComponents[i].GetComponentInChildren<Text>().text = buttonTxt;
+                adventureGame.buttonComponents[i].GetComponentInChildren<Button>().onClick.AddListener ( delegate
+                {
+                    adventureGame.LoadMotherState(motherState);
+                });
             }
             else
             {
-                buttonComponents[i].gameObject.SetActive(false);
+                adventureGame.buttonComponents[i].gameObject.SetActive(false);
             }
         }
     }

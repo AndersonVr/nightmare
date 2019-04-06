@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "SalaMotherState")]
+/*[CreateAssetMenu(menuName = "SalaMotherState")]
 public class SalaMotherState : MotherState
 {
   
-}
+}*/
